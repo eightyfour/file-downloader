@@ -1,13 +1,35 @@
 {
-  "name": "file-uploader",
-  "auth": "eightyfour",
-  "email": "eightyfour@thinkuseful.de",
-  "description": "Reads the URL from a config and upload all files to local file system.",
-  "version": "0.0.1",
-  "dependencies": {},
-  "readmeFilename": "README.md",
-  "main": "app.js",
-  "repository": "",
-  "license": "MIT",
-  "devDependencies": {}
+    "name": "file-uploader",
+    "auth": "eightyfour",
+    "email": "eightyfour@thinkuseful.de",
+    "description": "Reads the URL from a config and upload all files to local file system.",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "config": {
+        "upload": [
+            {
+                "destFolder" : "images/1/",
+                "upload" : [
+                    "http://han.gd:8000/files/foo/140602_MP_016.jpg",
+                    "http://han.gd:8000/files/foo/IMG_20140614_180158.jpg",
+                    "http://han.gd:8000/files/foo/blue_coke.jpg"
+                ]
+            }
+        ],
+        "outfile": [
+            "src/js/main.js",
+            "src/js/uploadBox.js",
+            "src/js/c-upload.js",
+            "src/js/c-uploadPostView.js",
+            "src/js/c-gallery.js"
+        ]
+    },
+    "dependencies": {},
+    "readmeFilename": "README.md",
+    "main": "app.js",
+    "repository": "",
+    "license": "MIT",
+    "devDependencies": {}
 }
