@@ -2,7 +2,7 @@
     "name": "file-uploader",
     "auth": "eightyfour",
     "email": "eightyfour@thinkuseful.de",
-    "description": "Reads the URL from a config and upload all files to local file system.",
+    "description": "Reads the URL from a config and downloads all files to local file system.",
     "version": "0.0.1",
     "scripts": {
         "start": "node app.js"
@@ -10,25 +10,30 @@
     "config": {
         "upload": [
             {
-                "destFolder" : "images/1/",
-                "upload" : [
+                "destFolder": "images/foo/sprites",
+                "urls": [
                     "http://han.gd:8000/files/foo/140602_MP_016.jpg",
                     "http://han.gd:8000/files/foo/IMG_20140614_180158.jpg",
+                    {"url" : "http://han.gd:8000/files/foo/eightyfour_rocket.jpg", "rename" : "rocket-man.jpg"},
+                    "http://han.gd:8000/files/foo/blue_coke.jpg"
+                ]
+            },
+            {
+                "destFolder": "images/",
+                "urls": [
+                    "http://han.gd:8000/files/foo/none.jpg",
+                    "http://han.gd:8000/files/foo/IMG_20140614_180158.jpg",
+                    {"url" : "http://han.gd:8000/files/foo/eightyfour_rocket.jpg", "rename" : "rocket-man.jpg"},
                     "http://han.gd:8000/files/foo/blue_coke.jpg"
                 ]
             }
-        ],
-        "outfile": [
-            "src/js/main.js",
-            "src/js/uploadBox.js",
-            "src/js/c-upload.js",
-            "src/js/c-uploadPostView.js",
-            "src/js/c-gallery.js"
         ]
     },
-    "dependencies": {},
+    "dependencies": {
+        "request": "^2.64.0"
+    },
     "readmeFilename": "README.md",
-    "main": "app.js",
+    "main": "lib/downloader.js",
     "repository": "",
     "license": "MIT",
     "devDependencies": {}

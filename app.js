@@ -1,7 +1,12 @@
 /**
- * Created by han on 07.10.15.
+ * Created by eightyfour on 07.10.15.
  */
-var config = process.env.npm_package_config_upload,
-    uploader = require('./lib/uploader.js');
+var config = require('./package').config.upload,
+    downloader = require('./lib/downloader.js');
 
-uploader.upload(config);
+console.log('app:config', config);
+
+if (config) {
+
+    downloader.load(config, __dirname);
+}
