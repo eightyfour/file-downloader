@@ -1,0 +1,13 @@
+{
+  "name": "file-uploader",
+  "auth": "eightyfour",
+  "email": "eightyfour@thinkuseful.de",
+  "description": "Reads the URL from a config and upload all files to local file system.",
+  "version": "0.0.1",
+  "dependencies": {},
+  "readmeFilename": "README.md",
+  "main": "app.js",
+  "repository": "",
+  "license": "MIT",
+  "devDependencies": {}
+}
