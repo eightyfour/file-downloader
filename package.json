@@ -1,5 +1,5 @@
 {
-    "name": "file-uploader",
+    "name": "file-downloader",
     "auth": "eightyfour",
     "email": "eightyfour@thinkuseful.de",
     "description": "Reads the URL from a config and downloads all files to local file system.",
