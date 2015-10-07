@@ -9,4 +9,7 @@ console.log('app:config', config);
 if (config) {
 
     downloader.load(config, __dirname);
+    downloader.onError(function (ulr) {
+        console.log('app:onError', ulr);
+    })
 }
