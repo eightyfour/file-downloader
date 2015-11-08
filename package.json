@@ -1,40 +1,66 @@
 {
-    "name": "file-downloader",
-    "auth": "eightyfour",
-    "email": "eightyfour@thinkuseful.de",
-    "description": "Reads the URL from a config and downloads all files to local file system.",
-    "version": "0.0.1",
-    "scripts": {
-        "start": "node app.js"
-    },
-    "config": {
-        "upload": [
-            {
-                "destFolder": "images/foo/sprites",
-                "urls": [
-                    "http://han.gd:8000/files/foo/140602_MP_016.jpg",
-                    "http://han.gd:8000/files/foo/IMG_20140614_180158.jpg",
-                    {"url" : "http://han.gd:8000/files/foo/eightyfour_rocket.jpg", "rename" : "rocket-man.jpg"},
-                    "http://han.gd:8000/files/foo/blue_coke.jpg"
-                ]
-            },
-            {
-                "destFolder": "images/",
-                "urls": [
-                    "http://han.gd:8000/files/foo/none.jpg",
-                    "http://han.gd:8000/files/foo/IMG_20140614_180158.jpg",
-                    {"url" : "http://han.gd:8000/files/foo/eightyfour_rocket.jpg", "rename" : "rocket-man.jpg"},
-                    "http://han.gd:8000/files/foo/blue_coke.jpg"
-                ]
-            }
+  "name": "file-downloader",
+  "auth": "eightyfour",
+  "email": "eightyfour@thinkuseful.de",
+  "description": "Download files from a server and saves it locally.",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "config": {
+    "upload": [
+      {
+        "destFolder": "images/foo/sprites",
+        "urls": [
+          "http://han.gd:8000/files/foo/140602_MP_016.jpg",
+          "http://han.gd:8000/files/foo/IMG_20140614_180158.jpg",
+          {
+            "url": "http://han.gd:8000/files/foo/eightyfour_rocket.jpg",
+            "rename": "rocket-man.jpg"
+          },
+          "http://han.gd:8000/files/foo/blue_coke.jpg"
         ]
-    },
-    "dependencies": {
-        "request": "^2.64.0"
-    },
-    "readmeFilename": "README.md",
-    "main": "lib/downloader.js",
-    "repository": "",
-    "license": "MIT",
-    "devDependencies": {}
+      },
+      {
+        "destFolder": "images/",
+        "urls": [
+          "http://han.gd:8000/files/foo/none.jpg",
+          "http://han.gd:8000/files/foo/IMG_20140614_180158.jpg",
+          {
+            "url": "http://han.gd:8000/files/foo/eightyfour_rocket.jpg",
+            "rename": "rocket-man.jpg"
+          },
+          "http://han.gd:8000/files/foo/blue_coke.jpg"
+        ]
+      },
+      {
+        "destFolder": "images/singleFolder",
+        "singleFolder": true,
+        "urls": [
+          "http://han.gd:8000/files/foo/none.jpg",
+          "http://han.gd:8000/files/foo/IMG_20140614_180158.jpg",
+          {
+            "url": "http://han.gd:8000/files/foo/eightyfour_rocket.jpg",
+            "rename": "rocket-man_1.jpg"
+          },
+          {
+            "url": "http://han.gd:8000/files/foo/eightyfour_rocket.jpg",
+            "rename": "rocket-man_2.jpg"
+          },
+          "http://han.gd:8000/files/foo/blue_coke.jpg"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "request": "^2.64.0"
+  },
+  "readmeFilename": "README.md",
+  "main": "lib/downloader.js",
+  "repository": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cli-color": "^1.1.0"
+  }
 }
