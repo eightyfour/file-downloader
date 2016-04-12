@@ -3,7 +3,7 @@
   "auth": "eightyfour",
   "email": "eightyfour@thinkuseful.de",
   "description": "Download files from a server and saves it locally.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "start": "node app.js"
   },
