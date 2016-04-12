@@ -8,7 +8,9 @@ var config = require('./package').config.upload,
 console.log('app:config', config);
 
 if (config) {
-    downloader.load(config, __dirname);
+    downloader.load(config, __dirname, function () {
+        console.log('Download complete');
+    });
     downloader.onError(function (ulr) {
         console.log(clc.red.bold('Failure ') + clc.yellow('Download failed for file'), clc.yellowBright(ulr));
     })
